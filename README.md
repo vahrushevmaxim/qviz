@@ -11,13 +11,13 @@ activeUserNotificationWindow: Показывает уведомление пол
 -------------------------------------------------------------------------------------------------------------------------------
 2).Перечислите очередность исполнения скриптов. Почему именно в таком?
 Порядок будет:
-<script src="js_scr_2.js"></script> (1 сек.)
-<script async src="js_scr_1.js"></script> (1.5 сек.)
-<script defer src="js_scr_4.js"></script> (1.5 сек.)
-<script src="js_scr_5.js"></script> (2 сек.)
-<script defer src="js_scr_3.js"></script> (3 сек.)
-<script async src="js_scr_6.js"></script> (1 сек.)
-<script defer src="js_scr_7.js"></script> (0.1 сек.)
+1.<script src="js_scr_2.js"></script> (1 сек.)
+2.<script async src="js_scr_1.js"></script> (1.5 сек.)
+3.<script defer src="js_scr_4.js"></script> (1.5 сек.)
+4.<script src="js_scr_5.js"></script> (2 сек.)
+5.<script defer src="js_scr_3.js"></script> (3 сек.)
+6.<script async src="js_scr_6.js"></script> (1 сек.)
+7.<script defer src="js_scr_7.js"></script> (0.1 сек.)
 Это происходит потому, что скрипты с атрибутом async загружаются параллельно и исполняются сразу после завершения загрузки, не блокируя загрузку страницы.
 Скрипты с атрибутом defer также загружаются параллельно, но исполняются в порядке их появления в коде после завершения загрузки в DOM HTML и до события DOMContentLoaded,
 сохраняя при этом порядок выполнения. Те скрипты, которые не имеют ни async, ни defer, будут загружены и исполнены последовательно в порядке их появления в коде.
