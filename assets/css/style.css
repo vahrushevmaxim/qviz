@@ -1,0 +1,131 @@
+body {
+    padding: 0;
+    margin: 0;
+    color: #211e1c;
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.quiz-main__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.quiz-main__card {
+    max-width: 640px;
+    width: 100%;
+    border: 4px solid aqua;
+    background-color: beige;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.quiz-main__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    padding: 50px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+
+.quiz-main__title {
+    margin: 0;
+    color: #000000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+}
+
+.quiz-main__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.quiz-main__item {
+    position: relative;
+}
+
+.quiz-main__btn {
+    margin: 0;
+    padding: 0;
+    background-color: #ffeb89;
+    border: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 20px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 1;
+    transition: background-color .3s ease-in-out;
+}
+
+.quiz-main__input {
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.quiz-main__input:checked~.quiz-main__btn {
+    background-color: darkgreen;
+}
+
+.quiz-main__button-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-main__button {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    border: none;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 15px;
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+@media (max-width: 700px) {
+    .quiz-main__list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
